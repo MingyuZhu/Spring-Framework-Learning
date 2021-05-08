@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <!--配置数据源不需要mybatis来做了，交给spring，mybatis只需要配置别名
+     和mappers注册设置-->
+    <typeAliases>
+        <!--会自动扫描该包下的所有类，
+        自动将这些类名的首字母小写，作为别名-->
+        <package name="com.zmy.pojo"/>
+    </typeAliases>
+
+    <mappers>
+        <mapper class="com.zmy.dao.BookMapper"/>
+    </mappers>
+</configuration>
